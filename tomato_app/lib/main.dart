@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tomato_app/LoginSignUpPage.dart';
+import 'package:tomato_app/splash.dart';
 
 void main() => runApp(MyApp());
 
@@ -12,7 +13,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
       primarySwatch: Colors.deepOrange,
       ),
-      home: new LoginSignUpPage(),
+      home: new SplashScreen(),
+      routes: <String, WidgetBuilder>{
+        '/LoginScreen': (BuildContext context) => new LoginSignUpPage(),
+      },
+      debugShowCheckedModeBanner: false,
     );
   }
 }
